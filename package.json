@@ -1,0 +1,31 @@
+{
+  "name": "we-p-app",
+  "description": "tel something about your project here",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./app.js",
+  "scripts": {
+    "dev": "node app.js --dev",
+    "verbose": "node app.js --prod",
+    "prod": "node app.js --prod",
+    "start": "node app.js",
+    "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
+    "coverage": "NODE_ENV=test LOG_LV=info node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/bootstrap.js test/**/*.test.js"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "lodash": "^4.15.0",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "we-core": "^1.8.10",
+    "we-plugin-auth": "^1.1.4",
+    "we-plugin-user": "^1.1.1"
+  },
+  "devDependencies": {},
+  "wejs": {
+    "plugins": {
+      "we-plugin-user": true,
+      "we-plugin-auth": true
+    }
+  }
+}
