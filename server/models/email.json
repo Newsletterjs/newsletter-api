@@ -1,0 +1,28 @@
+{
+  "attributes": {
+    "name": {
+      "type": "STRING"
+    },
+    "subject": {
+      "type": "STRING"
+    },
+    "body": {
+      "type": "STRING"
+    },
+    "published": {
+      "type": "BOOLEAN"
+    }
+
+  },
+  "associations": {
+    "newsletter": {
+      "type": "belongsTo",
+      "model": "newsletter",
+      "inverse": "emails"
+    }
+  },
+  "hooks": {
+    "afterCreate": []
+  }
+}
+

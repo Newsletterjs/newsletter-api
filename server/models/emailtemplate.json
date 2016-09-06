@@ -1,0 +1,21 @@
+{
+  "attributes": {
+    "name": {
+      "type": "STRING"
+    },
+    "description": {
+      "type": "STRING"
+    },
+    "subject": {
+      "type": "STRING"
+    },
+    "body": {
+      "type": "STRING"
+    }
+  },
+  "associations": {},
+  "hooks": {
+    "afterCreate": []
+  }
+}
+
