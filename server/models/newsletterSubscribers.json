@@ -1,0 +1,27 @@
+{
+  "attributes": {
+    "id": {
+      "type": "INTEGER",
+      "primaryKey": true,
+      "autoIncrement": true
+    },
+    "sendPeriod": {
+      "type": "STRING",
+      "size": 10,
+      "defaultValue": "instant"
+    }
+  },
+  "associations": {
+    "newsletter": {
+      "type": "belongsTo",
+      "model": "newsletter",
+      "constraints": false
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "constraints": false
+    }
+  }
+}
+

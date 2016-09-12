@@ -2,5 +2,24 @@
   "get /": {
     "controller": "main",
     "action": "index"
+  },
+  "get /all-subscriptions": {
+    "controller": "newsletter",
+    "action": "getAllUserSubscriptions",
+    "model": "newsletterSubscribers"
+  },
+  "get /newsletter/:newsletterId/is-subscribed": {
+    "controller": "newsletter",
+    "action": "isSubscribed",
+    "model": "newsletterSubscribers"
+  },
+  "post /newsletter/:newsletterId/subscribe": {
+    "controller": "newsletter",
+    "action": "subscribe",
+    "model": "newsletterSubscribers"
+  },
+  "post /newsletter/:newsletterId/un-subscribe": {
+    "controller": "newsletter",
+    "action": "unSubscribe"
   }
 }

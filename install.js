@@ -14,7 +14,7 @@ module.exports = {
     fns.push(function registerUser1(done) {
       var user1 = {
         username: 'admin',
-        email: 'admin@example.com',
+        email: 'contato@albertosouza.net',
         password: '123', // change after install
         displayName: 'Administrator',
         active: true,
@@ -44,7 +44,20 @@ module.exports = {
       .catch(done);
     });
 
+    fns.push(function createExampleNewsletters(done) {
+      we.log.info('Creating first newsletters');
 
+      we.db.models.newsletter.create({
+        name: 'Tech news',
+        description: 'Newsletter about the newest tecnologies in the world'
+      })
+      .then(function(user) {
+        done();
+        return user;
+      })
+      .catch(done);
+
+    });
 
     we.utils.async.series(fns, done);
   }

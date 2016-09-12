@@ -20,13 +20,18 @@
     "pg-hstore": "^2.3.2",
     "we-core": "^1.8.10",
     "we-plugin-auth": "^1.1.4",
-    "we-plugin-user": "^1.1.1"
+    "we-plugin-user": "^1.1.2",
+    "we-plugin-passport-jwt": "^1.1.1",
+    "we-plugin-acl": "^1.2.8"
   },
   "devDependencies": {},
   "wejs": {
     "plugins": {
       "we-plugin-user": true,
-      "we-plugin-auth": true
-    }
+      "we-plugin-auth": true,
+      "we-plugin-passport-jwt": true,
+      "we-plugin-acl": true
+    },
+    "devPlugins": {}
   }
 }

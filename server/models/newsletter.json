@@ -15,12 +15,16 @@
       "type": "belongsToMany",
       "model": "user",
       "through": "newsletterSubscribers",
-      "inverse": "newsleters"
+      "inverse": "newsletters"
     },
     "emails": {
       "type": "hasMany",
       "model": "email",
       "inverse": "newsletter"
+    },
+    "creator": {
+      "type": "belongsTo",
+      "model": "user"
     }
   },
   "hooks": {
