@@ -9,7 +9,7 @@ module.exports = {
     we.log.info('Starting project install...');
 
     var fns = [];
-
+    var sUser;
 
     fns.push(function registerUser1(done) {
       var user1 = {
@@ -29,6 +29,9 @@ module.exports = {
       })
       .spread(function (user, created) {
         we.log.info('New User with id: ', user.id);
+
+        sUser = user;
+
         // install we-plugin-auth for use password
         if (!we.db.models.password) return done();
         // set the password
@@ -49,7 +52,8 @@ module.exports = {
 
       we.db.models.newsletter.create({
         name: 'Tech news',
-        description: 'Newsletter about the newest tecnologies in the world'
+        description: 'Newsletter about the newest tecnologies in the world',
+        creatorId: sUser.id
       })
       .then(function(user) {
         done();
