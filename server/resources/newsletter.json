@@ -1,3 +1,14 @@
 {
-  "name": "newsletter"
+  "name": "newsletter",
+  "findAll": {
+    "search": {
+      "search":  {
+        "parser": "startsWith",
+        "target": {
+          "type": "field",
+          "field": "name"
+        }
+      }
+    }
+  }
 }
